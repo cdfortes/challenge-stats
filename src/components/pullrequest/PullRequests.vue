@@ -2,7 +2,7 @@
   <div v-if="numberOfPullRequests === 0">Nenhum pull request foi enviado para essa edição do evento ainda</div>
   <div v-else>
     <pull-request
-      v-for="pullRequest in pullRequests.nodes"
+      v-for="pullRequest in pullRequests"
       :key="pullRequest.id"
       :pullRequest="pullRequest"
     />

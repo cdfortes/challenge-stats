@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import PullRequests from '@/components/pullrequest/PullRequests'
 
 describe('Pull Requests', () => {
@@ -8,7 +8,7 @@ describe('Pull Requests', () => {
         nodes: []
       }
     }
-    const component = mount(PullRequests, { propsData: { repository }})
+    const component = shallowMount(PullRequests, { propsData: { repository }})
     expect(component.text()).toBe('Nenhum pull request foi enviado para essa edição do evento ainda')
   })
 
@@ -16,17 +16,20 @@ describe('Pull Requests', () => {
     const repository = {
       pullRequests: {}
     }
-    const component = mount(PullRequests, { propsData: { repository }})
+    const component = shallowMount(PullRequests, { propsData: { repository }})
     expect(component.text()).toBe('Nenhum pull request foi enviado para essa edição do evento ainda')
   })
 
   it(`should render the pull requests when the repository contains pull requests nodes`, () => {
     const repository = {
       pullRequests: {
-        nodes: [ {fakepullrequest: {} }]
+        totalCount: 1,
+        nodes: [{
+          fakepullrequest: ':)'
+        }]
       }
     }
-    const component = mount(PullRequests, { propsData: { repository }})
+    const component = shallowMount(PullRequests, { propsData: { repository }})
     expect(component.text()).toBe('')
   })
 })

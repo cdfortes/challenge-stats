@@ -1,36 +1,34 @@
-<style src="./challenge.styl" lang="stylus" scoped></style>
-
 <template>
   <div class="challenge">
-    <div class="challenge__details">
-      <div class="challenge__details__header">
+    <div>
+      <div class="challenge__header">
         <h2>{{ challenge.title }}</h2>
-        <p :title="challenge.deadline">
+        <p :title="challenge.deadline" class="challenge__header__deadline">
           <strong>Deadline:</strong>
           {{ challenge.deadline | toTextFromNow }}
         </p>
-        <p title="Nº de participantes">
+        <p title="Nº de participantes" class="challenge__header__participants">
           <strong>Participantes:</strong>
           {{ participants }}
         </p>
       </div>
-      <p class="challenge__details__description">
-        {{ challenge.small_description }}
+      <p class="challenge__description">
+        {{ challenge.description }}
       </p>
     </div>
     <div class="challenge__winners">
       <winners :winners="challenge.winners" />
-      <PullRequestList :repository="challenge.repository" />
+      <pull-requests :repository="challenge.repository" />
     </div>
   </div>
 </template>
 
 <script>
 import Winners from '@/components/winner/Winners'
-import PullRequestList from '@/components/pullrequest/PullRequestList'
+import PullRequests from '@/components/pullrequest/PullRequests'
 
 export default {
-  components: { Winners, PullRequestList },
+  components: { Winners, PullRequests },
   props: {
     challenge: { type: Object, required: true },
   },

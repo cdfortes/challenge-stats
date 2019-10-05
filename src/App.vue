@@ -1,16 +1,19 @@
 <template>
-  <ChallengeList :challenges="challenges" :status="status" />
+  <list-challenges
+    :challenges="challenges"
+    :status="status"
+  />
 </template>
 
 
 <script>
 import challengesJson from '@/challenges.json'
 import { fetchPullRequestByLabel } from '@/lib/github'
-import ChallengeList from '@/components/challenge/ChallengeList'
+import Challenges from '@/components/challenge/Challenges'
 
 export default {
   components: {
-    ChallengeList
+    'list-challenges': Challenges
   },
   data(){
     return {
@@ -26,7 +29,7 @@ export default {
     let array = []
     try {
       for(const challenge of challengesJson){
-        const response = await fetchPullRequestByLabel(challenge['pull_request_label'])
+        const response = await fetchPullRequestByLabel(challenge['label'])
 
         if('message' in response)
           throw Error(response.message)
