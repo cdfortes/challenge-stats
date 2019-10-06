@@ -1,9 +1,9 @@
 name: Continuous Integration
 runs-on: ubuntu-latest
+on: [push, pull_request]
 
 jobs:
   testing:
-    on: [push, pull_request]
     steps:
       - name: Setup Environment (Using NodeJS 12.x)
       - uses: actions/checkout@v1
