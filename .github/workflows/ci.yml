@@ -23,9 +23,9 @@ jobs:
         run: npm run test:unit
 
       - name: Build Application
-          env:
-             VUE_APP_GH_TOKEN: ${{ secrets.VUE_APP_GH_TOKEN }}
-          npm: run build
+        env:
+          VUE_APP_GH_TOKEN: ${{ secrets.VUE_APP_GH_TOKEN }}
+        npm: run build
 
       - name: Upload distribution folder
         uses: actions/upload-artifact@v1
