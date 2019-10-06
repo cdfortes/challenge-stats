@@ -1,0 +1,36 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Environment (Using NodeJS 12.x)
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run unit tests and collect coverage
+        run: npm run test:unit
+
+  Deploy:
+    runs-on: ubuntu-latest
+    needs: Testing
+    steps:
+      - uses: actions/checkout@v1
+      - name: Setup Environment (Using NodeJS 12.x)
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies and Build Application
+        run: |
+          npm install
+          npm run build
