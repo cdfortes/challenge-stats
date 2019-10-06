@@ -1,6 +1,6 @@
 <template>
   <div class="pull-request">
-    <div>
+    <div class="pull-request__info">
       <img
         class="pull-request__user-avatar"
         :src="author.avatarUrl"
@@ -8,14 +8,16 @@
         :title="'@' + author.login">
       <p class="pull-request__signed">
         <a :href="author.url">@{{ author.login }}</a>
-        enviou sua participação {{ pullRequest.createdAt | toTextFromNow }}.
+        enviou sua participação {{ pullRequest.createdAt | toTextFromNow }}
       </p>
       <p class="pull-request__vote">
         Vote nesse pull request
-        <a :href="pullRequest.permalink">clicando aqui</a>.
+        <a :href="pullRequest.permalink">reagindo aqui</a>
       </p>
     </div>
-    <reactions :reactions="reactions" />
+    <div class="pull-request__reactions">
+      <reactions :reactions="reactions" />
+    </div>
   </div>
 </template>
 
@@ -37,3 +39,5 @@ export default {
   }
 }
 </script>
+
+<style lang="styl" src="./pull-request.styl" scoped></style>

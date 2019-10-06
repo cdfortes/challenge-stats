@@ -20,7 +20,7 @@ describe('Reactions', () => {
       nodes: []
     }
     const component = shallowMount(Reactions, { propsData: { reactions }})
-    expect(component.find('.reactions__counter').text()).toBe('Reações 10')
+    expect(component.find('.reactions__counter__total').text()).toBe('Reações 10')
   })
 
   it(`should render one unique reaction count when there's more than one reaction for same user`, () => {
@@ -30,8 +30,8 @@ describe('Reactions', () => {
       nodes: [{ user }, { user }, { user }]
     }
     const component = shallowMount(Reactions, { propsData: { reactions }})
-    expect(component.find('.reactions__counter').text()).toBe('Reações 3')
-    expect(component.find('.reactions__unique__counter').text()).toBe('Reações Únicas 1')
+    expect(component.find('.reactions__counter__total').text()).toBe('Reações 3')
+    expect(component.find('.reactions__counter__unique').text()).toBe('Reações Únicas 1')
   })
 
   it(`should render unique reactions count correctly when there's different users`, () => {
@@ -44,7 +44,7 @@ describe('Reactions', () => {
       ]
     }
     const component = shallowMount(Reactions, { propsData: { reactions }})
-    expect(component.find('.reactions__counter').text()).toBe('Reações 3')
-    expect(component.find('.reactions__unique__counter').text()).toBe('Reações Únicas 3')
+    expect(component.find('.reactions__counter__total').text()).toBe('Reações 3')
+    expect(component.find('.reactions__counter__unique').text()).toBe('Reações Únicas 3')
   })
 })

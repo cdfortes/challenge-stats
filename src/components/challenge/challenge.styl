@@ -1,0 +1,53 @@
+@import '../../stylus/variables.styl'
+@import '../../stylus/mixins.styl'
+
+@keyframes more-than-a-month-warning
+  from
+    color #eb4d4b
+  to
+    color #f0932b
+
+.challenge
+  width 95%
+  padding 2.5% 0
+
+  &.more-than-a-month
+    opacity .6
+    transition opacity 200ms ease-in-out
+    &:hover
+      opacity 1
+
+  .more-than-a-month-warning
+    flex(, flex-end)
+    animation more-than-a-month-warning 500ms ease-in-out alternate infinite
+
+  &__header
+    flex(, flex-start)
+    padding 10px
+
+    h2
+      color main_color
+      font-size challenge_header_title_font_size
+      font-family 'Permanent Marker', cursive;
+      text-shadow 12px 6px darken(rgba(main_color, 10%), 10%)
+
+    &__deadline
+      margin-left 2.5%
+      margin-right 10px
+
+    &__deadline
+    &__participants
+      background-color main_color
+      border-radius border_radius_size
+      color #fff
+      font-size .9em
+      padding badge_padding
+      text-transform uppercase
+
+  &__description
+    margin .5% 0
+    color text_color
+    width 75%
+
+  &__winners_and_pullrequests
+    width 100%

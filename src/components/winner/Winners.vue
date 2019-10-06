@@ -1,12 +1,15 @@
 <template>
   <div v-if="winners.length === 0">Este evento não ainda possui vencedores divulgados</div>
   <div v-else>
-    <winner
-      v-for="winner in winnerlist"
-      :key="winner.position"
-      :winner="winner"
-      :title="winner.position + 'º colocado'"
-    />
+    <h2>Vencedores</h2>
+    <div class="winners">
+      <winner
+        v-for="winner in winnerlist"
+        :key="winner.position"
+        :winner="winner"
+        :title="winner.position + 'º colocado'"
+      />
+    </div>
   </div>
 </template>
 
@@ -28,3 +31,5 @@ export default {
   }
 }
 </script>
+
+<style lang="styl" src="./winners.styl" scoped></style>

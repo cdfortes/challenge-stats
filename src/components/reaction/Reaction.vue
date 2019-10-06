@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <img
+  <div class="reaction">
+    <img class="reaction__user__avatar"
       :src="reaction.user.avatarUrl"
       :alt="reaction.user.login"
       :title="reaction.user.login"
     >
-    <div>
+    <div class="reaction__info">
       <a :href="reaction.user.url">@{{ reaction.user.login }}</a>
       reagiu com {{ reaction.content | toEmoji }} {{ reaction.createdAt | toTextFromNow }}
     </div>
@@ -26,3 +26,5 @@ export default {
   }
 }
 </script>
+
+<style lang="styl" src="./reaction.styl" scoped></style>

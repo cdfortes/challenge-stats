@@ -4,7 +4,7 @@
     "title": "SASS",
     "description": "O desafio do mês de agosto convida a comunidade conhecer as maravilhas do SASS. O objetivo era criar uma página inspirada em uma tela de transmissão da Globo News.",
     "label": "desafio-sass",
-    "deadline": "2019-08-24T17:00:00Z",
+    "deadline": "2019-08-25T00:00:00",
     "winners": [
       "reebr",
       "foxalex",
@@ -16,7 +16,7 @@
     "title": "Tailwind",
     "description": "O desafio do mês de setembro convida a comunidade conhecer framework Tailwind CSS. Dado um html simulando a homepage de uma startup, o objetivo era formatar o markup com o framework para que a página ficasse linda.",
     "label": "desafio-tailwind",
-    "deadline": "2019-10-05T17:00:00Z",
+    "deadline": "2019-10-06T00:00:00",
     "winners": []
   }
 ]

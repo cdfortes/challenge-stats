@@ -1,0 +1,35 @@
+@import '../../stylus/variables.styl'
+@import '../../stylus/mixins.styl'
+
+.reactions
+  flex(, flex-start)
+  height 100%
+
+  &__counter
+    flex()
+
+    &__total
+    &__unique
+      flex()
+      background-color main_color
+      border-radius border_radius_size
+      color #fff
+      flex-flow column
+      width 80px
+      text-align center
+
+      > span
+        font-size 2em
+        font-weight bold
+
+    &__unique
+      margin 0 10px
+      height 120px
+
+    &__total
+      height 80px
+
+  &__users
+    flex(, flex-start)
+    flex-grow 1
+    flex-flow row wrap

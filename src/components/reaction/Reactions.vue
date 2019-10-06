@@ -1,19 +1,21 @@
 <template>
   <div v-if="numberOfReactions === 0">Ninguém votou nesse pull request ainda</div>
   <div v-else class="reactions">
-    <p
-      class="reactions__counter"
-      title="Nº total de reações no pull request (contabilizando reações duplicadas).">
-      Reações<br>
-      <span>{{ reactions.totalCount }}</span>
-    </p>
-    <p
-      class="reactions__unique__counter"
-      title="Este é o número de reações únicas por usuário.">
-      Reações Únicas<br>
-      <span>{{ uniqueReactions.length }}</span>
-    </p>
-    <div>
+    <div class="reactions__counter">
+      <p
+        class="reactions__counter__total"
+        title="Nº total de reações no pull request (contabilizando reações duplicadas).">
+        Reações<br>
+        <span>{{ reactions.totalCount }}</span>
+      </p>
+      <p
+        class="reactions__counter__unique"
+        title="Este é o número de reações únicas por usuário.">
+        Reações Únicas<br>
+        <span>{{ uniqueReactions.length }}</span>
+      </p>
+      </div>
+    <div class="reactions__users">
       <reaction
         v-for="reaction in reactions.nodes"
         :key="reaction.id"
@@ -42,3 +44,5 @@ export default {
   }
 }
 </script>
+
+<style lang="styl" src="./reactions.styl" scoped></style>

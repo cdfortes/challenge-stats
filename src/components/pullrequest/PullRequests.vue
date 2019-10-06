@@ -28,3 +28,5 @@ export default {
   }
 }
 </script>
+
+<style lang="styl" src="./pull-requests.styl" scoped></style>

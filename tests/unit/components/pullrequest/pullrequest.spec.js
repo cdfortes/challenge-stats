@@ -39,7 +39,7 @@ describe('Pull Request', () => {
 
     const signed = component.find('.pull-request__signed')
     expect(signed.find('a').attributes('href')).toBe(pullRequest.author.url)
-    expect(cleanText(signed.text())).toBe('@gituser enviou sua participação há alguns minutos.')
+    expect(cleanText(signed.text())).toBe('@gituser enviou sua participação há alguns minutos')
   })
 
   it(`should render the pull request permalink correctly`, () => {
@@ -50,6 +50,6 @@ describe('Pull Request', () => {
 
     const vote = component.find('.pull-request__vote')
     expect(vote.find('a').attributes('href')).toBe(pullRequest.permalink)
-    expect(cleanText(vote.text())).toBe('Vote nesse pull request clicando aqui.')
+    expect(cleanText(vote.text())).toBe('Vote nesse pull request reagindo aqui')
   })
 })

@@ -1,0 +1,31 @@
+@import '../../stylus/variables.styl'
+@import '../../stylus/mixins.styl'
+
+.reaction
+  margin: 2.5px
+  position relative
+
+  &__user__avatar
+    border: avatar_border_size dotted main_color
+    border-radius 50%
+    box-shadow 0 2px 6px rgba(main_color, 20%)
+    height avatar_size_reaction
+
+    &:hover + .reaction__info
+      background-color: #fff
+      border: 2px dashed main_color
+      box-shadow 0 0 10px 2px rgba(main_color, 20%)
+      display inline-block
+      padding 5px 10px
+      transform translate(-50%, -120%)
+      white-space nowrap
+      z-index 999
+
+  &__info
+    display none
+    left 50%
+    position absolute
+    top 0
+    a
+      color main_color
+      text-decoration none

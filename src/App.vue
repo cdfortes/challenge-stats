@@ -54,7 +54,7 @@ export default {
   *::after,
   *::before {
     box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Concert One', cursive;
     margin: 0;
     padding: 0;
   }
