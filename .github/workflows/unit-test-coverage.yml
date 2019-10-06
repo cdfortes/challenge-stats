@@ -1,8 +1,5 @@
 name: Testing
-on:
-  push:
-    - '**'
-    - '!master'
+on: [push, pull_request]
 
 jobs:
   Testing:
