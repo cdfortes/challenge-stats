@@ -48,4 +48,5 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
           npm install netlify-cli
-          npx netlify deploy -p --dir=dist
+          npx netlify deploy --dir=dist
+          npx netlify deploy --prod
