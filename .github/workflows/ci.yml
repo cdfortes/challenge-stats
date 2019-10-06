@@ -40,7 +40,7 @@ jobs:
     needs: [testing]
     steps:
       - name: Build application
-      - uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v1
         with:
           name: node_modules
       - shell: bash
