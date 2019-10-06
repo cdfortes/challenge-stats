@@ -37,12 +37,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test-and-build]
     steps:
-      - uses: actions/checkout@v1
-      - name: Setup Environment (Using NodeJS 12.x)
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
       - name: Download distribution folder
         uses: actions/download-artifact@v1
         with:
@@ -53,5 +47,5 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          npm install netlify-cli
-          netlify deploy --dir=dist
+          npm install npm-run netlify-cli
+          npm-run netlify deploy --dir=dist
