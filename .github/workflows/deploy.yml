@@ -1,0 +1,31 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: netlify/actions/cli@master
+  #     - name: Deploy to Netlify
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: 12.x
+
+  #     - name: install dependencies
+  #       run: npm install
+
+  #     - name: Run unit tests and collect coverage
+  #       run: npm run test:unit
+
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   branches:
+  #     - branches
+    needs: testing
+    steps:
+      - needs: testing
+      - name: Deploy to Netlify
+        run: npm --version
