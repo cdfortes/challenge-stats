@@ -19,7 +19,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    branchs:
+    branches:
       - master
     needs: testing
     steps:
