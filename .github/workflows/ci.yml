@@ -15,7 +15,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - shell: bash
         run: npm install
+
       - name: 'Uploading node_modules'
         uses: actions/upload-artifact@v1
         with:
@@ -32,6 +34,7 @@ jobs:
           name: node_modules
 
       - name: Run unit tests and collect coverage
+      - shell: bash
         run: npm run test:unit
 
   build:
@@ -43,6 +46,7 @@ jobs:
         with:
           name: node_modules
       - name: Build application
+      - shell: bash
         run: npm run build
         uses: actions/upload-artifact@v1
         with:
@@ -57,6 +61,7 @@ jobs:
       #   with:
       #     name: node_modules
       - name: Deploy to Netlify
+      - shell: bash
         run: npm --version
         # uses: actions/upload-artifact@v1
         # with:
