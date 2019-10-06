@@ -59,10 +59,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - uses: actions/download-artifact@v1
+      - name: Deploy to Netlify
+        uses: actions/download-artifact@v1
         with:
           name: dist
-      - name: Deploy to Netlify
+
       - shell: bash
         run: npm --version
         # uses: actions/upload-artifact@v1
