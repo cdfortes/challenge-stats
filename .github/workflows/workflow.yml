@@ -17,10 +17,9 @@ jobs:
       - name: Run unit tests and collect coverage
         run: npm run test:unit
 
-  # deploy:
-  #   on: [push]
-  #   branchs:
-  #     - master
-  #   needs: testing
-  #   steps:
-  #     - name: Deploy to Netlify
+  deploy:
+    branchs:
+      - master
+    needs: testing
+    steps:
+      - name: Deploy to Netlify
