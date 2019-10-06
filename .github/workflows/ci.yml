@@ -25,7 +25,7 @@ jobs:
       - name: Build Application
         env:
           VUE_APP_GH_TOKEN: ${{ secrets.VUE_APP_GH_TOKEN }}
-        npm: run build
+        run: npm run build
 
       - name: Upload distribution folder
         uses: actions/upload-artifact@v1
