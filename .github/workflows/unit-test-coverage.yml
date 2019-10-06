@@ -1,7 +1,14 @@
 name: Testing
-on: [push, pull_request]
-branches:
-  - '!master'
+
+on:
+  push:
+    branchs:
+      - '**'
+      - '!master'
+  pull_request:
+    branchs:
+      - '**'
+      - '!master'
 
 jobs:
   Testing:
