@@ -28,12 +28,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [setup]
     steps:
-      - name: Download node_modules from setup
+      - name: Run unit tests and collect coverage
         uses: actions/download-artifact@v1
         with:
           name: node_modules
-
-      - name: Run unit tests and collect coverage
       - shell: bash
         run: npm run test:unit
 
@@ -41,11 +39,10 @@ jobs:
     runs-on: ubuntu-latest
     needs: [testing]
     steps:
-      - name: Download node_modules from setup
+      - name: Build application
       - uses: actions/download-artifact@v1
         with:
           name: node_modules
-      - name: Build application
       - shell: bash
         run: npm run build
         uses: actions/upload-artifact@v1
