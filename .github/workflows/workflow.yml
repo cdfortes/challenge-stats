@@ -1,18 +1,26 @@
-name: CI
-
-on: [push]
+name: Continuous Integration
+runs-on: ubuntu-latest
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  testing:
+    on: [push, pull_request]
     steps:
-    - uses: actions/checkout@v1
-    - name: setup Node environment (12.x)
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-  
-    - name: install dependencies and run unit tests
-      run: |
-        npm install
-        npm run test:unit
+      - name: Setup Environment (Using NodeJS 12.x)
+      - uses: actions/checkout@v1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: install dependencies
+        run: npm install
+
+      - name: Run unit tests and collect coverage
+        run: npm run test:unit
+
+  # deploy:
+  #   on: [push]
+  #   branchs:
+  #     - master
+  #   needs: testing
+  #   steps:
+  #     - name: Deploy to Netlify
