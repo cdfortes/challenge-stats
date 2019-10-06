@@ -37,14 +37,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: [test-and-build]
     steps:
-      - name: Deploy to Netlify
+      - name: Download distribution folder
         uses: actions/download-artifact@v1
         with:
           name: dist
 
-      - shell: bash
-        run: npm --version
-        # uses: actions/upload-artifact@v1
-        # with:
-        #   name: dist
-        #   path: dist
+      - name: Deploy to Netlify
+        env:
+           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+            NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: |
+          npm install netlify-cli -g
+          netlify deploy --dir=dist
