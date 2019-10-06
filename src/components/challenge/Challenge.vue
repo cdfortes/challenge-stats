@@ -3,7 +3,7 @@
     :class="{ 'more-than-a-month': isFinishedAMonthAgo }"
     class="challenge">
     <div>
-      <div v-if=" isFinishedAMonthAgo" class="more-than-a-month-warning">
+      <div v-if="isFinishedAMonthAgo" class="more-than-a-month-warning">
         Este Evento finalizou há mais de um mês, por isso a cor é exibida diferentemente 🚩
       </div>
       <div class="challenge__header">

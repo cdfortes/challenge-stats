@@ -25,7 +25,6 @@ describe('Reaction', () => {
     const image = component.find('img')
     expect(image.attributes('src')).toBe(reaction.user.avatarUrl)
     expect(image.attributes('alt')).toBe(reaction.user.login)
-    expect(image.attributes('title')).toBe(reaction.user.login)
   })
 
   it(`should render the information about the reaction`, () => {

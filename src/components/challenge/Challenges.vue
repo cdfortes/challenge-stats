@@ -6,7 +6,10 @@
       :challenge="challenge"
     />
   </div>
-  <div v-else>{{ status.message }}</div>
+  <div v-else>
+    <img class="zen-monkey" src="@/assets/zen-monkey.png" alt="">
+    <h2>{{ status.message }}</h2>
+  </div>
 </template>
 
 <script>

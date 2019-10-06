@@ -3,7 +3,6 @@
     <img class="reaction__user__avatar"
       :src="reaction.user.avatarUrl"
       :alt="reaction.user.login"
-      :title="reaction.user.login"
     >
     <div class="reaction__info">
       <a :href="reaction.user.url">@{{ reaction.user.login }}</a>
