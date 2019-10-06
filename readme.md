@@ -10,9 +10,11 @@ Você pode entender melhor como funciona o desafio [neste link][5], mas resumida
 
 Como todo o processo ocorre no GitHub, a ideia foi consumir a API do GitHub para consultar e "fazer alguma coisa" com os dados obtidos do repositório do desafio — *foi utilizada a [API v4 (GraphQL)][3] para realizar toda a [query][6]*.
 
+
 <p align="center">
-  <img src="https://i.imgur.com/ICsXLVK.gif">
+  <kbd><img src="https://i.imgur.com/f9S3Fw5.png"></kbd>
 </p>
+
 
 ## Contribuindo
 
