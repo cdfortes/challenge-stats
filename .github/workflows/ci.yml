@@ -27,8 +27,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build
-        env:
-           VUE_APP_GH_TOKEN: ${{ tokens. VUE_APP_GH_TOKEN }}
+        with:
+           VUE_APP_GH_TOKEN: ${{ tokens.VUE_APP_GH_TOKEN }}
         run: npm run build
 
       - uses: netlify/actions/cli@master
