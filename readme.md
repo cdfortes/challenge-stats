@@ -2,7 +2,7 @@
   <img src="./src/assets/zen-monkey.png" height="150" align="center">
 </p>
 
-# Challenge Stats
+# Challenge Stats [![latest-tag][8]][11] [![open-issues][9]][10]
 
 Este projeto foi um experimento desenvolvido em live na Twitch ([**@reeebr**][1]) para aprender [VueJS][2]. Para isso, foi criado um app com o objetivo de listar os participantes do [#desafio333][4] (desafio mensal criado pelo canal [**@codigofalado**][7] com a proposta de convidar a comunidade a aprender novas tecnologias).
 
@@ -27,3 +27,7 @@ Contribuições são bem-vindas, [veja como contribuir](contributing.md).
 [5]:https://github.com/codigofalado/desafio333#como-participar
 [6]:https://github.com/reebr/challenge-stats/blob/development/src/lib/github.js
 [7]:https://github.com/codigofalado
+[8]:https://badgen.net/github/tag/reebr/challenge-stats
+[9]:https://badgen.net/github/open-issues/reebr/challenge-stats
+[10]:https://github.com/reebr/challenge-stats/issues
+[11]:https://github.com/reebr/challenge-stats/releases
