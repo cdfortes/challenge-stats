@@ -1,12 +1,9 @@
 # Contribuindo
 
-Caso queira apenas inserir ou editar informações de um evento:
-
-## [🙉 Eu quero inserir um novo desafio](#adicionando-ou-editando-desafios)
-
-Caso queira contribuir com código, estamos utilizando VueJS + Stylus para o desenvolvimento do app:
-
+## [🙉 Eu quero inserir ou editar informações de um novo desafio](#adicionando-ou-editando-desafios)
 ## [🙈 Eu quero contribuir com código](#contribuindo-com-código)
+
+----
 
 # Adicionando ou editando desafios
 
@@ -37,7 +34,15 @@ Pode ser que um novo evento esteja ocorrendo e esta aplicação ainda não estej
 
 # Contribuindo com código
 
-Clone este repositório e instale as dependências.
+Primeiramente, obrigado pelo interesse em participar e melhorar este projeto.
+
+Toda contribuição é bem-vinda porém tenha bem definido qual é o escopo do que será alterado. É muito comum começarmos a mexer em algo específico e no decorrer do desenvolvimento ir fazendo "pequenos ajustes" em outras partes do código. Por favor, seja legal e não faça isso! 😭
+
+É preferível que sejam enviadas 10 pull requests pequenas e específicas ao invés de somente uma grande. Se realmente houver necessidade de uma refatoração maior, talvez seja melhor [criar uma issue][3] antes, para que possamos discutir como fazer isto.
+
+Tendo isto em mente...
+
+Clone este repositório e instale as dependências:
 
 ```
 git clone https://github.com/reebr/challenge-stats.git
@@ -77,3 +82,4 @@ Para construir a aplicação pronta para produção, utilize o comando `yarn ser
 
 [1]:https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line
 [2]:https://yarnpkg.com/lang/en/
+[3]:https://github.com/reebr/challenge-stats/issues
