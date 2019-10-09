@@ -32,6 +32,6 @@ describe('Challenges', () => {
 
     const component = shallowMount(Challenges, { store, localVue })
     expect(component.findAll('challenge-stub').length).toBe(1)
-    expect(mockedEmptyChallengeGetter).toHaveBeenCalled()
+    expect(mockedChallengeGetter).toHaveBeenCalled()
   })
 })
