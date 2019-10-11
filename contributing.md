@@ -80,6 +80,18 @@ DONE  Compiled successfully in 286ms
 
 Para construir a aplicação pronta para produção, utilize o comando `yarn serve`.
 
+# FAQ
+
+### Realizaram merge da minha contribuição mas não houve efeito no site
+
+Alterações na aplicação em produção só ocorrem quando todos os commits da branch `development` são mergeados na `master`. Isso ocorre somente quando uma release é fechada e as issues (ou pull requests) relacionadas a um milestone específico são concluídos.
+
+Supondo que sua contribuição foi marcada com a milestone `1.2.0`, quer dizer que é necessário que todas as issues (ou pull requests) dessa versão sejam finalizadas para que então seja criada uma [tag][5] e o deploy. Você pode acompanhar as milestones [neste link][4].
+
+
+
 [1]:https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line
 [2]:https://yarnpkg.com/lang/en/
 [3]:https://github.com/reebr/challenge-stats/issues
+[4]:https://github.com/reebr/challenge-stats/milestones
+[5]:https://github.com/reebr/challenge-stats/tags
