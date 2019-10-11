@@ -10,6 +10,7 @@
         <div
           v-if="isWinner(author.login)"
           :data-position="getWinnerPosition(author.login)"
+          :title="getWinnerPosition(author.login) + 'º colocado(a) nessa edição do evento'"
         >
           {{ getWinnerPosition(author.login) }}
         </div>
