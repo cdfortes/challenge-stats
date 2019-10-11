@@ -3,7 +3,6 @@
     <div class="pull-request__info">
       <div class="pull-request__user-avatar">
         <img
-          class="pull-request__user-avatar"
           :src="author.avatarUrl"
           :alt="author.login"
           :title="'@' + author.login">

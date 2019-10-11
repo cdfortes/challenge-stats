@@ -4,6 +4,8 @@ import { cleanText } from '../../test-helpers'
 
 describe('Pull Request', () => {
 
+  const winners = ['gituser1', 'gituser2', 'gituser3']
+
   const pullRequest = {
     author: {
       avatarUrl: 'https://fake-github.com/gituser/avatar.png',
@@ -21,11 +23,11 @@ describe('Pull Request', () => {
 
   it(`should render author avatar correctly`, () => {
     const component = shallowMount(PullRequest, {
-      propsData: { pullRequest },
+      propsData: { pullRequest, winners },
       filters
     })
 
-    const image = component.find('.pull-request__user-avatar')
+    const image = component.find('.pull-request__user-avatar > img')
     expect(image.attributes('src')).toBe(pullRequest.author.avatarUrl)
     expect(image.attributes('alt')).toBe(pullRequest.author.login)
     expect(image.attributes('title')).toBe('@' + pullRequest.author.login)
@@ -33,7 +35,7 @@ describe('Pull Request', () => {
 
   it(`should render the signed message correctly`, () => {
     const component = shallowMount(PullRequest, {
-      propsData: { pullRequest },
+      propsData: { pullRequest, winners },
       filters
     })
 
@@ -44,7 +46,7 @@ describe('Pull Request', () => {
 
   it(`should render the pull request permalink correctly`, () => {
     const component = shallowMount(PullRequest, {
-      propsData: { pullRequest },
+      propsData: { pullRequest, winners },
       filters
     })
 

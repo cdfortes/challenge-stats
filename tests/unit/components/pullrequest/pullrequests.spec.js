@@ -2,13 +2,16 @@ import { shallowMount } from '@vue/test-utils'
 import PullRequests from '@/components/pullrequest/PullRequests'
 
 describe('Pull Requests', () => {
+
+  const winners = ['gituser1', 'gituser2', 'gituser3']
+
   it(`should not render the pull requests when the repository pull requests is empty`, () => {
     const repository = {
       pullRequests: {
         nodes: []
       }
     }
-    const component = shallowMount(PullRequests, { propsData: { repository }})
+    const component = shallowMount(PullRequests, { propsData: { repository, winners }})
     expect(component.text()).toBe('Nenhum pull request foi enviado para essa edição do evento ainda')
   })
 
@@ -16,7 +19,7 @@ describe('Pull Requests', () => {
     const repository = {
       pullRequests: {}
     }
-    const component = shallowMount(PullRequests, { propsData: { repository }})
+    const component = shallowMount(PullRequests, { propsData: { repository, winners }})
     expect(component.text()).toBe('Nenhum pull request foi enviado para essa edição do evento ainda')
   })
 
@@ -25,11 +28,30 @@ describe('Pull Requests', () => {
       pullRequests: {
         totalCount: 1,
         nodes: [{
-          fakepullrequest: ':)'
+          id: 'hash',
+          permalink: 'permalink',
+          title: 'pull request title',
+          author: {
+            avatarUrl: 'avatar-url',
+            login: 'gituser',
+            url: 'https://github.com/gituser'
+          },
+          reactions: {
+            totalCount: 1,
+            nodes: [{
+              content: 'heart',
+              user: {
+                id: 'hash',
+                avatarUrl: 'avatar-url',
+                login: 'gituser',
+                url: 'https://github.com/gituser'
+              }
+            }]
+          }
         }]
       }
     }
-    const component = shallowMount(PullRequests, { propsData: { repository }})
+    const component = shallowMount(PullRequests, { propsData: { repository, winners }})
     expect(component.text()).toBe('')
   })
 })
