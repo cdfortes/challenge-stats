@@ -10,11 +10,12 @@
       </p>
       <p
         class="reactions__counter__unique"
-        title="Este é o número de reações únicas por usuário.">
+        title="Este é o número de reações únicas por usuário.
+Nessa contagem, é desconsiderada a reação do próprio autor e número de reações múltiplas dadas pelo mesmo usuário.">
         Reações Únicas<br>
         <span>{{ uniqueReactions.length }}</span>
       </p>
-      </div>
+    </div>
     <div class="reactions__users">
       <reaction
         v-for="reaction in reactions.nodes"
@@ -26,17 +27,20 @@
 </template>
 
 <script>
-import { uniqueReactionsByUserLogin } from '@/lib/helpers'
 import Reaction from '@/components/reaction/Reaction'
 
 export default {
   components: { Reaction },
   props: {
-    reactions: { type: Object, required: true }
+    reactions: { type: Object, required: true },
+    authorLogin: { type: String, required: true }
   },
   computed: {
     uniqueReactions(){
-      return uniqueReactionsByUserLogin(this.reactions)
+      let logins = this.reactions.nodes.map(reaction => reaction.user.login)
+      logins = logins.filter(login => login !== this.authorLogin)
+
+      return [ ...new Set(logins) ]
     },
     numberOfReactions(){
       return this.reactions.totalCount || 0
