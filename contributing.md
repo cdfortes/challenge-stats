@@ -2,6 +2,7 @@
 
 ## [🙉 Eu quero inserir ou editar informações de um novo desafio](#adicionando-ou-editando-desafios)
 ## [🙈 Eu quero contribuir com código](#contribuindo-com-código)
+## [💬 FAQ](#faq)
 
 ----
 
