@@ -37,8 +37,10 @@ export default {
   },
   computed: {
     uniqueReactions(){
-      let logins = this.reactions.nodes.map(reaction => reaction.user.login)
-      logins = logins.filter(login => login !== this.authorLogin)
+      let logins = this.reactions
+                       .nodes
+                       .map(reaction => reaction.user.login)
+                       .filter(login => login !== this.authorLogin)
 
       return [ ...new Set(logins) ]
     },
