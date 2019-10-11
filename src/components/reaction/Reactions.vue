@@ -11,7 +11,7 @@
       <p
         class="reactions__counter__unique"
         title="Este é o número de reações únicas por usuário.
-Nessa contagem, é desconsiderada a reação do próprio autor e número de reações múltiplas dadas pelo mesmo usuário.">
+Nessa contagem, é desconsiderada a reação do próprio autor e número de reações múltiplas dadas por um mesmo usuário.">
         Reações Únicas<br>
         <span>{{ uniqueReactions.length }}</span>
       </p>
