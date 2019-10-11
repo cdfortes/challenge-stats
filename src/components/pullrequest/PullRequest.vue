@@ -1,7 +1,6 @@
 <template>
   <div class="pull-request">
     <div class="pull-request__info">
-
       <div class="pull-request__user-avatar">
         <img
           class="pull-request__user-avatar"

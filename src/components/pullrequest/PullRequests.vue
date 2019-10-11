@@ -3,7 +3,7 @@
   <div v-else>
     <div class="non-winners" v-if="winners.length === 0">Este evento não ainda possui vencedores divulgados</div>
     <pull-request
-      v-for="pullRequest in pullRequests"
+      v-for="pullRequest in sortedPullRequests"
       :key="pullRequest.id"
       :pullRequest="pullRequest"
       :winners="winnersWithPositionIncluded"
@@ -33,6 +33,21 @@ export default {
         position: index + 1,
         login: winner
       }))
+    },
+    sortedPullRequests(){
+      const prs = this.pullRequests
+
+      const withWinners = prs.filter(pr => this.winners.includes(pr.author.login))
+      const withoutWinners = prs.filter(pr => !this.winners.includes(pr.author.login))
+
+      withoutWinners.sort((pullRequestOne, pullRequestTwo) => {
+        return pullRequestOne.reactions.totalCount < pullRequestTwo.reactions.totalCount
+      })
+
+      return [
+        ...withWinners,
+        ...withoutWinners
+      ]
     }
   }
 }
