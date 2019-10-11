@@ -22,19 +22,20 @@
       </p>
     </div>
     <div class="challenge__winners_and_pullrequests">
-      <winners :winners="challenge.winners" />
-      <pull-requests :repository="challenge.repository"/>
+      <pull-requests
+        :repository="challenge.repository"
+        :winners="challenge.winners"
+      />
     </div>
   </div>
 </template>
 
 <script>
-import Winners from '@/components/winner/Winners'
 import PullRequests from '@/components/pullrequest/PullRequests'
 import { isAMonthAgoToday } from '@/lib/datetime'
 
 export default {
-  components: { Winners, PullRequests },
+  components: { PullRequests },
   props: {
     challenge: { type: Object, required: true },
   },
