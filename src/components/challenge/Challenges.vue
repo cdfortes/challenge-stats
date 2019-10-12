@@ -1,5 +1,5 @@
 <template>
-  <div v-if="status.loaded && challenges.length > 0">
+  <div v-if="challenges.length > 0">
     <challenge
       v-for="(challenge, index) in challenges"
       :key="index"
@@ -7,8 +7,8 @@
     />
   </div>
   <div v-else>
-    <img class="zen-monkey" src="@/assets/zen-monkey.png" alt="">
-    <h2>{{ status.message }}</h2>
+    <img class="zen-monkey" src="@/assets/zen-monkey.png">
+    <h2>Buscando informações relacionadas aos eventos, aguarde...</h2>
   </div>
 </template>
 
@@ -17,9 +17,10 @@ import Challenge from '@/components/challenge/Challenge'
 
 export default {
   components: { Challenge },
-  props: {
-    challenges: { type: Array, required: true },
-    status: { type: Object, required: true }
+  computed: {
+    challenges(){
+      return this.$store.getters.challenges
+    }
   }
 }
 </script>
