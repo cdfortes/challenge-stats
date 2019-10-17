@@ -10,10 +10,10 @@ Para isto, utilizando a [API v4][3], foi desenvolvida uma aplicação para lista
 
 O resultado pode ser visualizado nos links:
 
-| Branch | Live |
-| ------ | ---- |
-| master | https://challenge-stats.netlify.com/ |
-| development | https://dev-challenge-stats.netlify.com/ |
+| Branch | Live |   |
+| ------ | ---- | ---- |
+| master | https://challenge-stats.netlify.com/ | Última [release][7] disponilizada |
+| development | https://dev-challenge-stats.netlify.com/ | Versão atual da branch `development` (sempre em constante mudança) |
 
 <p align="center">
   <kbd><img src="https://i.imgur.com/vTD7Jrw.png"></kbd>
@@ -31,6 +31,7 @@ Contribuições são — muito!🤗 — bem-vindas, [veja como contribuir](contr
 [4]:https://github.com/codigofalado/desafio333
 [5]:https://github.com/codigofalado/desafio333#como-participar
 [6]:https://github.com/codigofalado
+[7]:https://github.com/reebr/challenge-stats/releases
 [8]:https://badgen.net/github/release/reebr/challenge-stats
 [9]:https://badgen.net/github/open-issues/reebr/challenge-stats
 [10]:https://github.com/reebr/challenge-stats/issues
