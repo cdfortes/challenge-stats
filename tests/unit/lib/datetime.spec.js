@@ -19,7 +19,7 @@ describe('Datetime', () => {
   // Quando o dia atual é depois do deadline, passado mais de um mês
   it(`should return the formatted datetime text when it's after deadline spending a month`, () => {
     const date = new Date('2019-01-24T17:00:00')
-    expect(formatDatetimeText(date)).toBe('24 de Janeiro de 2019 às 17:00')
+    expect(formatDatetimeText(date)).toBe('em 24 de Janeiro de 2019 às 17:00')
   })
 
 })

@@ -27,7 +27,7 @@ export default date => {
   const deadline = dayjs(date)
 
   if(isAMonthAgoToday(deadline))
-    return deadline.locale(ptbr).format('DD [de] MMMM [de] YYYY [às] HH:mm')
+    return deadline.locale(ptbr).format('[em] DD [de] MMMM [de] YYYY [às] HH:mm')
 
   return deadline.locale(ptbr).fromNow()
 }
