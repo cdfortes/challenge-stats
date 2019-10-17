@@ -24,7 +24,7 @@
       </p>
     </div>
     <div class="pull-request__reactions">
-      <reactions :reactions="reactions" />
+      <reactions :reactions="reactions" :authorLogin="author.login"/>
     </div>
   </div>
 </template>

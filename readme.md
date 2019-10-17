@@ -27,7 +27,7 @@ Contribuições são bem-vindas, [veja como contribuir](contributing.md).
 [5]:https://github.com/codigofalado/desafio333#como-participar
 [6]:https://github.com/reebr/challenge-stats/blob/development/src/lib/github.js
 [7]:https://github.com/codigofalado
-[8]:https://badgen.net/github/tag/reebr/challenge-stats
+[8]:https://badgen.net/github/release/reebr/challenge-stats
 [9]:https://badgen.net/github/open-issues/reebr/challenge-stats
 [10]:https://github.com/reebr/challenge-stats/issues
 [11]:https://github.com/reebr/challenge-stats/releases
