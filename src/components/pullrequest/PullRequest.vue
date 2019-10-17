@@ -35,7 +35,7 @@ import Reactions from '@/components/reaction/Reactions'
 export default {
   components: { Reactions },
   props: {
-    pullRequest: { type: Object, required: true },
+    pullRequest: { required: true },
     winners: { type: Array, required: true }
   },
   computed: {

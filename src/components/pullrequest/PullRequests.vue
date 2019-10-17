@@ -3,8 +3,8 @@
   <div v-else>
     <div class="non-winners" v-if="winners.length === 0">Este evento não ainda possui vencedores divulgados</div>
     <pull-request
-      v-for="pullrequest in sortedPullRequests"
-      :key="pullrequest.id"
+      v-for="(pullrequest, index) in sortedPullRequestsByUniqueReactionCount"
+      :key="index"
       :pullRequest="pullrequest"
       :winners="winnersWithPositionIncluded"
     />
@@ -26,7 +26,7 @@ export default {
       return prs.nodes || []
     },
     numberOfPullRequests(){
-      return this.pullRequests.length || 0
+      return this.pullRequests.length
     },
     winnersWithPositionIncluded(){
       return this.winners.map((winner, index) => ({
@@ -34,11 +34,24 @@ export default {
         login: winner
       }))
     },
-    sortedPullRequests(){
+    sortedPullRequestsByUniqueReactionCount(){
       const prs = this.pullRequests
 
-      prs.sort((pullRequestOne, pullRequestTwo) => {
-        return pullRequestOne.reactions.totalCount < pullRequestTwo.reactions.totalCount
+      prs.sort((prOne, prTwo) => {
+        const uniquePrOneReactionCounter = [... new Set(
+          prOne.reactions
+               .nodes
+               .filter(reaction => reaction.user.login !== prOne.author.login)
+               .map(reaction => reaction.user.login)
+        )].length
+
+        const uniquePrTwoReactionCounter = [... new Set(
+          prTwo.reactions
+               .nodes
+               .filter(reaction => reaction.user.login !== prTwo.author.login)
+               .map(reaction => reaction.user.login)
+        )].length
+        return uniquePrTwoReactionCounter > uniquePrOneReactionCounter
       })
 
       const winnersPr = prs.filter(pr => this.winners.includes(pr.author.login))
@@ -52,7 +65,7 @@ export default {
         ...orderedWinners,
         ...nonWinnersPr
       ]
-    }
+    },
   }
 }
 </script>

@@ -3,14 +3,13 @@ import PullRequests from '@/components/pullrequest/PullRequests'
 
 describe('Pull Requests', () => {
 
-  const winners = ['gituser1', 'gituser2', 'gituser3']
-
   it(`should not render the pull requests when the repository pull requests is empty`, () => {
     const repository = {
       pullRequests: {
         nodes: []
       }
     }
+    const winners = ['gituser']
     const component = shallowMount(PullRequests, { propsData: { repository, winners }})
     expect(component.text()).toBe('Nenhum pull request foi enviado para essa edição do evento ainda')
   })
@@ -19,6 +18,7 @@ describe('Pull Requests', () => {
     const repository = {
       pullRequests: {}
     }
+    const winners = ['gituser']
     const component = shallowMount(PullRequests, { propsData: { repository, winners }})
     expect(component.text()).toBe('Nenhum pull request foi enviado para essa edição do evento ainda')
   })
@@ -28,21 +28,23 @@ describe('Pull Requests', () => {
       pullRequests: {
         totalCount: 1,
         nodes: [{
-          id: 'hash',
-          permalink: 'permalink',
-          title: 'pull request title',
           author: {
             avatarUrl: 'avatar-url',
             login: 'gituser',
             url: 'https://github.com/gituser'
           },
+          createdAt: '2019-08-25T00:00:00',
+          id: 'MDExOlB1bGxSZXF1ZXN0MzIxMTYxMzI5',
+          permalink: 'permalink',
+          title: 'pull request title',
           reactions: {
             totalCount: 1,
             nodes: [{
               content: 'heart',
+              createdAt: '2019-08-25T00:00:00',
               user: {
-                id: 'hash',
                 avatarUrl: 'avatar-url',
+                id: 'MDExOlB1bGxSZXF1ZXN0MzIxMTYxMzI5',
                 login: 'gituser',
                 url: 'https://github.com/gituser'
               }
@@ -51,6 +53,7 @@ describe('Pull Requests', () => {
         }]
       }
     }
+    const winners = ['gituser1']
     const component = shallowMount(PullRequests, { propsData: { repository, winners }})
     expect(component.text()).toBe('')
   })
