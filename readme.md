@@ -1,8 +1,15 @@
 <p align="center">
   <img src="./src/assets/zen-monkey.png" height="150" align="center">
 </p>
-
-# Challenge Stats [![latest-tag][8]][11] [![open-issues][9]][10]
+<h1 align="center">Challenge Stats</h1>
+<p align="center">
+  <a href="https://github.com/reebr/challenge-stats/releases">
+    <img src="https://badgen.net/github/release/reebr/challenge-stats" title="Última Release">
+  </a>
+  <a href="https://github.com/reebr/challenge-stats/issues">
+    <img src="https://badgen.net/github/open-issues/reebr/challenge-stats" title="Issues Abertas">
+  </a>
+</p>
 
 Este projeto foi um experimento desenvolvido em live na Twitch ([**@reeebr**][1]) com o objetivo de aprender [VueJS][2]. 🖖
 
