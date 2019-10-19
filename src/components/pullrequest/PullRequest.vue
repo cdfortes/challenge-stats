@@ -1,11 +1,19 @@
 <template>
   <div class="pull-request">
     <div class="pull-request__info">
-      <img
-        class="pull-request__user-avatar"
-        :src="author.avatarUrl"
-        :alt="author.login"
-        :title="'@' + author.login">
+      <div class="pull-request__user-avatar">
+        <img
+          :src="author.avatarUrl"
+          :alt="author.login"
+          :title="'@' + author.login">
+        <div
+          v-if="isWinner(author.login)"
+          :data-position="getWinnerPosition(author.login)"
+          :title="getWinnerPosition(author.login) + 'º colocado(a) nessa edição do evento'"
+        >
+          {{ getWinnerPosition(author.login) }}
+        </div>
+      </div>
       <p class="pull-request__signed">
         <a :href="author.url">@{{ author.login }}</a>
         enviou sua participação {{ pullRequest.createdAt | toTextFromNow }}
@@ -27,7 +35,8 @@ import Reactions from '@/components/reaction/Reactions'
 export default {
   components: { Reactions },
   props: {
-    pullRequest: { type: Object, required: true }
+    pullRequest: { required: true },
+    winners: { type: Array, required: true }
   },
   computed: {
     author(){
@@ -35,6 +44,16 @@ export default {
     },
     reactions(){
       return this.pullRequest.reactions
+    }
+  },
+  methods: {
+    isWinner(login){
+      const logins = this.winners.map(winner => winner.login)
+      return logins.includes(login)
+    },
+    getWinnerPosition(login){
+      const winner = this.winners.filter(winner => winner.login == login)
+      return winner[0].position
     }
   }
 }

@@ -32,6 +32,7 @@ module.exports = {
     "<rootDir>/src/**/*.vue",
     "<rootDir>/src/**/*.js",
     "!<rootDir>/src/main.js",
+    "!<rootDir>/src/store/index.js",
     "!<rootDir>/src/App.vue"
   ],
   coverageDirectory: '<rootDir>/tests/__coverage__'
