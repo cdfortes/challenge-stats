@@ -32,7 +32,7 @@ O resultado pode ser visualizado nos links:
 Contribuições são — muito!🤗 — bem-vindas, [veja como contribuir](contributing.md).
 
 
-[1]:https://www.twitch.tv/reeebr
+[1]:https://www.twitch.tv/reebrtv
 [2]:https://vuejs.org/
 [3]:https://developer.github.com/v4/
 [4]:https://github.com/codigofalado/desafio333
