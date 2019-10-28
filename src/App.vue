@@ -22,31 +22,36 @@ export default {
 </script>
 
 <style lang="stylus">
-  *
-  *::after
-  *::before
-    box-sizing border-box
-    font-family 'Concert One', cursive
-    margin 0
-    padding 0
+@import "./stylus/variables.styl"
 
-  html
-  body
-    height 100%
-    > div
-      height inherit
+::selection
+  background-color rgba(main_color, 20%)
 
-  .contribute
-    height 30px
-    width 30px
-    position fixed
-    top 2%
-    right 2%
-    user-select none
-    z-index 99999
-    transition transform 200ms ease-in
-    &:hover
-      transform scale(1.5)
-    > img
-      height inherit
+*
+*::after
+*::before
+  box-sizing border-box
+  font-family 'Concert One', cursive
+  margin 0
+  padding 0
+
+html
+body
+  height 100%
+  > div
+    height inherit
+
+.contribute
+  height 30px
+  width 30px
+  position fixed
+  top 2%
+  right 2%
+  user-select none
+  z-index 99999
+  transition transform 200ms ease-in
+  &:hover
+    transform scale(1.5)
+  > img
+    height inherit
 </style>
