@@ -22,6 +22,11 @@ export default {
 </script>
 
 <style lang="stylus">
+@import "./stylus/variables.styl"
+
+::selection
+  background-color rgba(main_color, 20%)
+
 *
 *::after
 *::before
