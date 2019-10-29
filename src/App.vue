@@ -34,6 +34,12 @@ export default {
   font-family 'Concert One', cursive
   margin 0
   padding 0
+  cursor default
+
+a
+a::after
+b::before
+  cursor pointer
 
 html
 body
