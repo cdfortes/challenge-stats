@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 import configuration from '@/challenges.json'
 import { fetchPullRequestByLabel } from '@/lib/github'
+import { SET_CHALLENGE } from '@/store/mutations-types'
 
 vue.use(Vuex)
 
@@ -11,7 +12,7 @@ export default new Vuex.Store({
     challenges: [],
   },
   mutations: {
-    setChallenges(state, payload){
+    [SET_CHALLENGE](state, payload){
       state.challenges = payload || []
     }
   },
@@ -30,7 +31,7 @@ export default new Vuex.Store({
           ...response.data
         })
       }
-      commit('setChallenges', challenges)
+      commit('SET_CHALLENGE', challenges)
     }
   },
   getters: {
