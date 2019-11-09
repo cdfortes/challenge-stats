@@ -57,6 +57,33 @@
 
   &__user-avatar
     height avatar_size_pull_request
-    border-radius 50%
-    border avatar_border_size dotted main_color
-    box-shadow 0 6px 4px rgba(main_color, 20%)
+    position relative
+    > img
+      height 100%
+      border-radius 50%
+      border avatar_border_size dotted main_color
+      box-shadow 0 6px 4px rgba(main_color, 20%)
+    > div
+      flex()
+      background-color: red
+      border-radius 50%
+      color #fff
+      font-size 1.6em
+      height 40px
+      width 40px
+      position absolute
+      right -5px
+      top -5px
+      user-select none
+      &[data-position='1']
+        background-color winners_gold
+        box-shadow: 0 4px 10px 1px rgba(darken(winners_gold, 20%), 80%) inset
+        border: 4px solid darken(winners_gold, 20%)
+      &[data-position='2']
+        background-color winners_silver
+        box-shadow: 0 4px 10px 1px rgba(darken(winners_silver, 20%), 80%) inset
+        border: 4px solid darken(winners_silver, 20%)
+      &[data-position='3']
+        background-color winners_bronze
+        box-shadow: 0 4px 10px 1px rgba(darken(winners_bronze, 20%), 80%) inset
+        border: 4px solid darken(winners_bronze, 20%)
