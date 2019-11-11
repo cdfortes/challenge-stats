@@ -30,5 +30,13 @@
     "label": "desafio-api-url-preview",
     "deadline": "2019-10-26T23:59:59",
     "winners": []
+  },
+  {
+    "edition": 4,
+    "title": "Websocket",
+    "description": "O desafio do mês de Novembro é focado em WebSockets. O participante precisará fazer uma solução, qualquer solução, utilizando WebSockets que, trabalhará tanto no Back-End quanto no Front-End para desenvolver algo pronto para o uso. Vencerá aquele que fizer a solução mais criativa.",
+    "label": "desafio-websocket",
+    "deadline": "2019-12-05T23:59:59",
+    "winners": []
   }
 ]
