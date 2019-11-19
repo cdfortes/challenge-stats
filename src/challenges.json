@@ -29,7 +29,11 @@
     "description": "O desafio do mês de Outubro é focado em Back-End e será possível usar qualquer linguagem de programação. Vamos simular que um cliente precisa de uma API para responder a requisições que retornarão dados necessários para gerar uma pré-visualização de uma URL.",
     "label": "desafio-api-url-preview",
     "deadline": "2019-10-26T23:59:59",
-    "winners": []
+    "winners": [
+      "marcopandolfo",
+      "foxalex",
+      "jpedrosa"
+    ]
   },
   {
     "edition": 4,
