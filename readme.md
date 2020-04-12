@@ -2,12 +2,18 @@
   <img src="./src/assets/zen-monkey.png" height="150" align="center">
 </p>
 <h1 align="center">Challenge Stats</h1>
+
+> **No Maintenance Intended**: Não estou com tempo para manter o projeto, por conta disso estou arquivando. Não aceitarei novas contribuições, bem como irei excluir o projeto do Netlify #sorry. Mas você pode clonar este repositório e dar continuidade no desenvolvimento. 🤗
+
 <p align="center">
   <a href="https://github.com/reebr/challenge-stats/releases">
     <img src="https://badgen.net/github/release/reebr/challenge-stats" title="Última Release">
   </a>
   <a href="https://github.com/reebr/challenge-stats/issues">
     <img src="https://badgen.net/github/open-issues/reebr/challenge-stats" title="Issues Abertas">
+  </a>
+  <a href="http://unmaintained.tech/">
+    <img src="http://unmaintained.tech/badge.svg" title="unmaintained">
   </a>
 </p>
 
@@ -32,7 +38,7 @@ O resultado pode ser visualizado nos links:
 Contribuições são — muito!🤗 — bem-vindas, [veja como contribuir](contributing.md).
 
 
-[1]:https://www.twitch.tv/reeebr
+[1]:https://www.twitch.tv/reebrtv
 [2]:https://vuejs.org/
 [3]:https://developer.github.com/v4/
 [4]:https://github.com/codigofalado/desafio333

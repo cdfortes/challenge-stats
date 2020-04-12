@@ -29,6 +29,18 @@
     "description": "O desafio do mês de Outubro é focado em Back-End e será possível usar qualquer linguagem de programação. Vamos simular que um cliente precisa de uma API para responder a requisições que retornarão dados necessários para gerar uma pré-visualização de uma URL.",
     "label": "desafio-api-url-preview",
     "deadline": "2019-10-26T23:59:59",
+    "winners": [
+      "marcopandolfo",
+      "foxalex",
+      "jpedrosa"
+    ]
+  },
+  {
+    "edition": 4,
+    "title": "Websocket",
+    "description": "O desafio do mês de Novembro é focado em WebSockets. O participante precisará fazer uma solução, qualquer solução, utilizando WebSockets que, trabalhará tanto no Back-End quanto no Front-End para desenvolver algo pronto para o uso. Vencerá aquele que fizer a solução mais criativa.",
+    "label": "desafio-websocket",
+    "deadline": "2019-12-05T23:59:59",
     "winners": []
   }
 ]
